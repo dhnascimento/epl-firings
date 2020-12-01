@@ -114,7 +114,7 @@ requests-file==1.5.1
 requests-unixsocket==0.2.0
 scikit-learn==0.23.2
 scipy==1.5.4
-screen-resolution-extra==0.0.0
+
 SecretStorage==3.1.2
 Send2Trash==1.5.0
 sessioninstaller==0.0.0

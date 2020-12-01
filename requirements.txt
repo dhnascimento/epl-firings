@@ -108,7 +108,7 @@ PyYAML==5.3.1
 pyzmq==19.0.2
 regex==2020.10.28
 repolib==1.5.1
-repoman==1.2.2
+
 requests==2.23.0
 requests-file==1.5.1
 requests-unixsocket==0.2.0

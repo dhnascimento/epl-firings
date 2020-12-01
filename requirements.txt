@@ -88,7 +88,7 @@ pycairo==1.16.2
 pycparser==2.20
 pycups==2.0.1
 pydbus==0.6.0
-pyflatpak==0.4.0
+
 Pygments==2.7.2
 PyGObject==3.38.0
 PyJWT==1.7.1

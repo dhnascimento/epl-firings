@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/index.css"
+    />
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+    <title>Will the Manager be Fired?</title>
+  </head>
+  <body>
+    <div class="container p-1 central">
+      <body>
+
+        <div class="container">
+  
+          <!-- Trigger the modal with a button -->
+          <a href="" id="about-modal" data-toggle="modal" data-target="#aboutModal">About this Project</a>
+        
+          <!-- Modal -->
+          <div class="modal fade" id="aboutModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">About this project</h4>
+                </div>
+                <div class="modal-body">
+                  <p>This is the Natural Language Processing model I built as part of my capstone project for the BrainStation Data Science bootcamp.</p>
+                  <p>In short, what the model does is analyse the content of a news article about a football/soccer manager from the English Premier League and output a prediction if this article is about someone who is likely to be fired in the next days or not.</p>
+                  <p>The model was built using mostly the Scikit-Learn and NLTK libraries for Python. The code used in this project can be found <a href="https://github.com/dhnascimento/Predicting-Management-Firings-for-the-EPL-Based-on-News-Articles">here</a>.</p>
+                  <p>Do you want to talk more about it or just do some networking? Please add me on <a href="https://www.linkedin.com/in/danielhnascimento/">Linkedin</a> and visit my <a href="https://danielhn.herokuapp.com/home">portfolio</a> website. Always happy to connect!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      <div class="jumbotron jumbotrom-fluid text-white">
+        <div
+          class="container d-flex align-items-center flex-column justify-content-center"
+        >
+          
+          <h1 class="display-3 texttitle">Will the Manager be Fired?</h1>
+          
+        </div>
+      </div>
+
+      <div class="row border rounded">
+        <form class="main-form py-2" action="/" method="POST">
+          <h3>Paste the article's URL</h3>
+          <div class="form-group url">
+            <input type="url" name="url" placeholder="Enter URL" required />
+          </div>
+          <button type="submit" class="btn btn-success btn-lg mb-10">
+            Run Prediction
+          </button>
+        </form>
+      </div>
+      <div class="row border rounded">
+        <ul class="links-list">
+          <h4 class="column-head">Some links to try (copy and paste):</h4>
+          <li>
+            <a
+              href="https://www.telegraph.co.uk/football/2019/11/18/mauricio-pochettino-holds-crisis-talks-daniel-levy-tottenhams/"
+            >
+              Mauricio Pochettino holds crisis talks with Daniel Levy as
+              Tottenham's players brace for managerial change
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.skysports.com/football/news/11686/11872440/watford-manager-quique-sanchez-flores-in-regular-dialogue-with-clubs-owners"
+            >
+              Watford manager Quique Sanchez Flores in regular dialogue with
+              club's owners
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://news.sky.com/story/jose-mourinho-i-was-rude-to-an-idiot-says-spurs-boss-after-booking-11899672"
+            >
+              Jose Mourinho: I was rude to an idiot, says Spurs boss after
+              booking
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.90min.com/posts/ole-gunnar-solskjaer-predicts-what-will-happen-january-transfer-window"
+            >
+              Ole Gunnar Solskjaer Predicts What Will Happen in January Transfer
+              Window
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row border rounded results">
+        <div class="text-results">
+          
+          <p>Results will appear here.</p>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

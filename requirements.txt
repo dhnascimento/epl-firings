@@ -32,7 +32,7 @@ feedfinder2==0.0.4
 feedparser==6.0.2
 filelock==3.0.12
 Flask==1.1.2
-
+Frozen-Flask==0.15
 httplib2==0.18.1
 idna==2.10
 ipykernel==5.3.4

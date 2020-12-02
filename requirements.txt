@@ -84,7 +84,7 @@ prometheus-client==0.8.0
 prompt-toolkit==3.0.8
 
 ptyprocess==0.6.0
-pycairo==1.14.6
+# pycairo==1.14.6
 pycparser==2.20
 pycups==2.0.1
 pydbus==0.6.0

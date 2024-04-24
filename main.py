@@ -1,12 +1,11 @@
 import numpy as np
 from flask import Flask, request, render_template
 from newspaper import Article
-from lemmatizer import lemmaNLTK
-import pickle
+import dill
 
 app = Flask(__name__)
 # Load the model
-model = pickle.load(open('model.pkl','rb'))
+model = dill.load(open('model.pkl','rb'))
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -17,35 +16,29 @@ def home():
     else:
         animation = 0
         # Get the data from the POST request.
-        # data = request.get_json(force=True)
-        
-        # data = request.form['text']
         url = request.form['url']
-        # print(data)
+        # Parse download and parse article text
         article = Article(url)
         article.download()
         article.parse()
-        # article.nlp()
-        text = article.text
 
+        text = article.text
         title = article.title
-   
+        # Call model to run prediction
         prediction = model.predict([text])
-        prediction2 = str(100 * round(model.predict_proba([text])[0][prediction[0]],4)) 
+        prediction2 = str(100 * round(model.predict_proba([text])[0][prediction[0]],4))
 
         # Take the first value of prediction
         output = "BE FIRED" if prediction[0] == 1 else "NOT BE FIRED"
         return render_template(
-            'index.html', 
-            prediction_text = output, 
-            prob = prediction2, 
-            title = title, 
-            url = url, 
+            'index.html',
+            prediction_text = output,
+            prob = prediction2,
+            title = title,
+            url = url,
             text = text,
             animation = animation
         )
-
-
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
